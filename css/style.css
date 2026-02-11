@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 0px 100px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #3347B0;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Left-LogotiposAndNames {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.Left-LogotiposAndNames p,
+h1 {
+    color: white;
+}
+
+.Right-Exit {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.Right-Exit h1 {
+    color: white;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: flex;
+}
+
+#Cursos {
+    padding: 100px 100px;
+    width: 100%;
+    background-color: #ffffff;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Left-PrincipalPageAndTitle {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.Left-Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 500px;
+    gap: 40px;
+}
+
+.Left-PrincipalPageAndTitle .Left-Title span {
+    color: #3347B0;
+    font-size: 64px;
+}
+
+.Left-PrincipalPageAndTitle .Left-Title h1 {
+    color: black;
+    font-size: 64px;
+}
+
+.Right-ClassListAvailable {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.Card-Class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    height: 200px;
+    width: 400px;
+    background-color: #3347B0;
+    box-shadow: 12px 12px 4px #3347B080;
+}
+
+.Card-Class h1 {
+    font-size: 64px;
+}
+
+.Left-IconAndContats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.Left-IconAndContats div {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.Left-IconAndContats div p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.Medium-CopyRightAndAuthor p {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.Right-SocialMidias {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.Right-SocialMidias img {
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+
+#Galeria-Alunos {
+    padding: 100px 100px;
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+#Galeria-Alunos h1 {
+    color: #3347B0;
+    font-size: 64px;
+}
+
+.Alunos-Curso {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.Aluno {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3347B0;
+    padding: 5px;
+    gap: 30px;
+    box-shadow: 8px 8px 12px #00000040;
+
+}
+
+.Aluno p {
+    color: #ffffff;
+    text-align: center;
+}
+
+#studant {
+    padding: 100px 100px;
+    width: 100%;
+    background-color: #ffffff;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Left-PerfilImageAndName {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 12px #00000040;
+}
+
+.Left-PerfilImageAndName p {
+    font-size: 18px;
+}
+
+.Left-PerfilImageAndName img {
+    height: 400px;
+    width: 400px;
+}
+
+.Right-Desempenho {
+    display: flex;
+    padding: 50px;
+    height: 500px;
+    width: 500px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 12px #00000040;
+}
+.Right-Desempenho p {
+    text-align: center;
+}
+.Notas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Grafico {
+    display: flex;
+    height: 300px;
+    background-color: #EEEFF8;
+    flex-direction: column;
+    justify-content: end;
+}
+.Nota-tirada {
+    /* Colocar uma variavel */
+    height: 80%;
+    background-color: #3347B0;
+    box-shadow: 0px 0px 24px #3347B0;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+footer {
+    padding: 0px 100px;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    background-color: #3347B0;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
