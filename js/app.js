@@ -1,31 +1,37 @@
 'use strict'
 
 const main = document.querySelector('main')
+
 const sectionCursos = document.getElementById('Cursos')
 const sectionGalerias = document.getElementById('Galeria-Alunos')
 const sectionAluno = document.getElementById('studant')
+
 const containerCursos = document.querySelector('.Right-ClassListAvailable')
 const containerAlunos = document.getElementById('id-classe')
-const tituloCurso = document.getElementById('title')
+
+
 const pathImg = `./img`
 const pathImgIcons = `/icons-class`
 
 const URL_BASE = "https://lion-school-phbo.onrender.com/"
 
 async function exibirTodosCursos() {
-    let URL_CURSOS = ` ${URL_BASE}/cursos`
+
+    let URL_CURSOS = `${URL_BASE}cursos`
+
     try {
         let response = await fetch(URL_CURSOS)
         const cursos = await response.json()
 
-        containerCursos.textContent("")
+        containerCursos.textContent = ""
 
         cursos.forEach(curso => {
-            const card = document.createElement('div')
-            const titulo = document.createElement('h1')
 
+            const card = document.createElement('div')
             card.classList.add('Card-Class')
-            titulo.textContent(curso.sigla)
+
+            const titulo = document.createElement('h1')
+            titulo.textContent = curso.sigla
 
             const img = document.createElement('img')
 
@@ -34,21 +40,20 @@ async function exibirTodosCursos() {
             else if (curso.sigla.toUpperCase() == 'REDES')
                 img.src = pathImg + pathImgIcons + `/icon-redes.svg`
             else
-                return false
+                return
 
-            titulo.classList.add('Card-Class')
-            img.classList.add('Card-Class')
-
-            // card.addEventListener('click', () => {
-            //     exibirEstudantesPorCurso(curso.id, curso.nome)
-            // })
+            card.appendChild(img)
+            card.appendChild(titulo)
 
             containerCursos.appendChild(card)
 
+            card.addEventListener('click', () => { 
+                exibirEstudantesPorCurso(curso.id, curso.nome)
+            })
         });
 
     } catch (error) {
-
+        console.log(error)
     }
 
 
@@ -67,8 +72,12 @@ async function exibirTodosCursos() {
     //   ]   
 
 }
-async function exibirEstudantesPorCurso(idCurso) {
+async function exibirEstudantesPorCurso(idCurso, nomeCurso) {
     let URL_ESTUDANTES_CURSO = ` ${URL_BASE}/alunos?${idCurso}`
+
+    const tituloCurso = document.getElementById('title') 
+    tituloCurso.textContent = ''
+    tituloCurso.textContent = nomeCurso
 
     //RETORNO ESPERADO
     // [
@@ -166,3 +175,4 @@ async function exibirDadosEstudante(idAluno) {
 
 }
 
+exibirTodosCursos()
