@@ -20,17 +20,20 @@ const pathImgIcons = `/icons-class`
 
 const URL_BASE = "https://lion-school-backend.onrender.com/"
 
+async function listarAllCursos() {
+    let URL_CURSOS = `${URL_BASE}cursos`
+    let response = await fetch(URL_CURSOS)
+    const cursos = await response.json()
+    return cursos
+    
+}
 async function exibirTodosCursos() {
 
-    let URL_CURSOS = `${URL_BASE}cursos`
-
     try {
-        let response = await fetch(URL_CURSOS)
-        const cursos = await response.json()
-
+        const cursosDisponiveis = listarAllCursos()
         containerCursos.textContent = ""
 
-        cursos.forEach(curso => {
+        cursosDisponiveis.forEach(curso => {
 
             const card = document.createElement('div')
             card.classList.add('Card-Class')
